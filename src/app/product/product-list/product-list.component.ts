@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { IProductos } from '../productos';
 
 @Component({
   selector: 'app-product-list',
@@ -10,40 +11,41 @@ export class ProductListComponent {
   imageWidth:number=50;
   imageMargin:number=2;
   muestraImg:boolean=true;
+  listFilter:string='';
   mostrarImagen():void{
     this.muestraImg=!this.muestraImg
   }
 
-  productos:any[]=[
+  productos:IProductos[]=[
     {
       "ProductoId":1,
       "Modelo":"Sentra",
       "Descripcion": "4 Puertas",
       "Year":"marzo 2 2020",
-      "Precio":"2000",
+      "Precio":2000,
       "Color":"Azul",
       "Marca":"AUDI",
-      "ImagenUrl": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.expansion.com%2Fempresas%2Fmotor%2F2023%2F01%2F02%2F63b2c5afe5fdeaa86d8b456d.html&psig=AOvVaw0dLp87nnQRTEIbdCH2Az9R&ust=1726886349108000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCLjjqI2_0IgDFQAAAAAdAAAAABAE"
+      "ImagenUrl": "https://acroadtrip.blob.core.windows.net/catalogo-imagenes/xl/RT_V_0c7166c16ff74073b65851f7f0b360ed.jpg"
     },
     {
       "ProductoId":2,
       "Modelo":"Rio",
       "Descripcion": "4 Puertas",
       "Year":"marzo 2 2024",
-      "Precio":"4000",
+      "Precio":4000,
       "Color":"Blanco",
       "Marca":"AUDI",
-      "ImagenUrl": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.autobild.es%2Fnoticias%2Flamborghini-fin-ha-confirmado-tipo-coche-tanto-tiempo-llevabamos-esperando-1283840&psig=AOvVaw0dLp87nnQRTEIbdCH2Az9R&ust=1726886349108000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCLjjqI2_0IgDFQAAAAAdAAAAABAJ "
+      "ImagenUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZfpz8rQSRQvYABTP7NQ4NA9C0_jW1u9oOXQ&s"
     },
     {
       "ProductoId":3,
       "Modelo":"Aveo",
       "Descripcion": "4 Puertas",
       "Year":"septiempre 19 2025",
-      "Precio":"4500",
+      "Precio":4500,
       "Color":"negro",
       "Marca":"AUDI",
-      "ImagenUrl": ""
+      "ImagenUrl": "https://www.chevrolet.com.mx/content/dam/chevrolet/na/mx/es/index/cars/2024-aveo-sedan/colorizer/01-images/rojo-metalico.jpg?imwidth=960"
     },
   ]
 }
