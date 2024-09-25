@@ -1,0 +1,24 @@
+<div>
+    <h1>Suma dos números</h1>
+    <form [formGroup]="formulario">
+        <div>
+            <label>Eje Ax:</label>
+            <input formControlName="ejeAx" type="number">
+        </div>
+        <div>
+            <label>Eje Ay:</label>
+            <input formControlName="ejeAy" type="number">
+        </div>
+        <div>
+            <label>Eje Bx:</label>
+            <input formControlName="ejeBx" type="number">
+        </div>
+        <div>
+            <label>Eje By:</label>
+            <input formControlName="ejeBy" type="number">
+        </div>
+
+        <button (click)="sumarNumeros()">Calcular</button>
+        <h3>LEl resultado es: {{resultado}}</h3>
+    </form>
+</div>
