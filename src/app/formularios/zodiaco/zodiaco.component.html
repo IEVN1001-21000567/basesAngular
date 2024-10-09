@@ -1,0 +1,42 @@
+<body>
+    
+<section id="Formulario">
+    <div>
+        <h1>Datos Personales</h1>
+        <form [formGroup]="formulario">
+            <div>
+                <label>Nombre: </label>
+                <input formControlName="Nombre" type="text"><br>
+                <label>Apellido Paterno: </label>
+                <input formControlName="aPaterno" type="text"><br>
+                <label>Apellido Materno: </label>
+                <input formControlName="aMaterno" type="text"><br>
+            </div>
+            <div>
+                <h4>Fecha de nacimiendo</h4> <br>
+                <label>Dia:</label>
+                <input formControlName="dia" type="number">
+                <label>Mes:</label>
+                <input formControlName="mes" type="text">
+                <label>Año:</label>
+                <input formControlName="año" type="number"><br>
+            </div>
+            <div>
+                <legend>Sexo</legend>
+                    <label><input formControlName="sexfem" type="radio" name="radio" value="masc" />Masculino</label>
+                    <label><input formControlName="sexmasc" type="radio" name="radio" value="fem" />Femenino</label>
+            </div>
+    
+            <button (click)="obtenerSigno()">Imprimir</button>
+            
+        </form>
+    </div>
+</section>
+<section id="Resultado">
+    <h2>Hola {{nombre}}</h2>
+    <h3>Tienes {{edad}} años</h3>
+    <h3>Tu signo zodiacal es: {{signo}}</h3>
+    <img src={{img}}>   
+
+</section>
+</body>
